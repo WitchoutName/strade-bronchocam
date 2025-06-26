@@ -20,6 +20,7 @@ Preliminary results show dimension estimates within 1 mm accuracy (mean error 0.
 
 ```plaintext
 strade-bronchocam/
+├── tex/                                 # Latex source code for the docs
 ├── data/
 │   ├── simsim/                          # generated data for tube experiment
 │   ├── real_anon/                       # real VB footage, anonymized
@@ -29,4 +30,6 @@ strade-bronchocam/
 ├── Simulated.ipynb                      # Python notebook with the tube experiment
 ├── Trachea.ipynb                        # Python notebook with the CV pipeline 
 ├── polygon_estimation_app.py            # polygon_estimation_app 
-└── virtprobe_app.py                     # Virtual probe app
+├── virtprobe_app.py                     # Virtual probe app
+├── polygon_estimation_app.py            # polygon_estimation_app 
+└── IP2_CV_AirwayEstimation.pdf          # Paper-styled documentation of my work

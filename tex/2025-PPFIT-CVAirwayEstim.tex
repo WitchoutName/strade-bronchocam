@@ -1,0 +1,90 @@
+%\documentclass{PPFIT} % pro psaní v angličtině / for writing in English
+\documentclass{PPFIT} % pro psaní v češtině / for writing in Czech
+%\documentclass[slovak]{PPFIT} % pro psaní ve slovenštině / for writing in Slovak
+
+%--------------------------------------------------------
+%--------------------------------------------------------
+%	PŘIZPŮSOBENÍ PDF / PDF CUSTOMIZATION
+%--------------------------------------------------------
+
+\hypersetup{
+	pdftitle={Paper Title},
+	pdfauthor={Author},
+	pdfkeywords={Keyword1, Keyword2, Keyword3}
+}
+
+%--------------------------------------------------------
+%--------------------------------------------------------
+%  PŘEDBĚŽNÁ vs. KONEČNÁ VERZE / REVIEW vs. FINAL VERSION
+%--------------------------------------------------------
+%   NECHTE následující řádek zakomentovaný pro PŘEDBĚŽNÉ VERZE
+%   Pro KONEČNOU VERZI řádek odkomentujte.
+%   LEAVE this line commented out for the REVIEW VERSIONS
+%   UNCOMMENT this line to get the FINAL VERSION
+
+\PPFinalCopy
+
+
+\PPYear{2024/2025}
+
+%--------------------------------------------------------
+%--------------------------------------------------------
+%	INFORMATION ABOUT THE ARTICLE
+%--------------------------------------------------------
+\PaperTitle{Estimating Airway Dimensions from Bronchoscopy Footage Using Known Tool Parameters}
+
+\Authors{Tomáš Foltyn*}
+\affiliation{*%
+    \href{mailto:xfolty21@fit.vut.cz}{xfolty21@fit.vut.cz},
+    \textit{Faculty of Information Technology, Brno University of Technology}}
+
+\Keywords{Bronchoscopy --- Computer Vision --- Airway Measurement}
+
+\Supplementary{\href{https://github.com/WitchoutName/strade-bronchocam}{Downloadable code}}
+
+%--------------------------------------------------------
+%--------------------------------------------------------
+%	ABSTRACT
+%--------------------------------------------------------
+\Abstract{
+In late-stage lung cancer, airway narrowing due to tumor growth or compression affects approximately 30\% of patients, necessitating precise stent selection for palliative care. Conventional imaging, such as CT scans, often fails due to obstructions or deformations, forcing clinicians to rely on subjective visual estimation from video bronchoscopy (VB) footage—an imprecise method prone to errors. This project explores a probe-based approach to estimate airway dimensions from VB footage, using a visible tool (e.g., biopsy forceps) as a scale reference to address the lack of intrinsic scale and challenges like poor image quality and distortions. A suite of experimental software tools was developed, including a simplified 3D tube experiment in Blender, achieving a mean error of 0.45 mm for circular cross-sections, and a computer vision pipeline to detect C-shaped tracheal cartilages in real VB images. Additionally, two PyQt5-based GUI applications were created: one for manual polygon annotation to compute dimensions and another for interactive probe placement and scaling. Preliminary results show sub-millimeter accuracy in controlled settings and successful cartilage detection, offering a proof of concept for computer-assisted stent planning in complex cases where traditional imaging is unreliable, though further validation is needed.
+
+
+}
+
+%--------------------------------------------------------
+%--------------------------------------------------------
+%	TEASER 
+%--------------------------------------------------------
+\Teaser{
+	\TeaserImage{teaser/ref_probe_teaser.png}
+	\TeaserImage{teaser/shape_teaser.png}
+	\TeaserImage{teaser/sim_teaser.png}
+	\TeaserImage{teaser/trachea_teaser.png}
+}
+
+%--------------------------------------------------------
+%--------------------------------------------------------
+%--------------------------------------------------------
+%--------------------------------------------------------
+\begin{document}
+\startdocument
+%--------------------------------------------------------
+%--------------------------------------------------------
+%	OBSAH ČLÁNKU / CONTENT OF THE ARTICLE
+%--------------------------------------------------------
+\input{2025-PPFIT-CVAirwayEstim-text-en}
+
+%--------------------------------------------------------
+%--------------------------------------------------------
+%--------------------------------------------------------
+%	LITERATURA
+%--------------------------------------------------------
+%--------------------------------------------------------
+\bibliographystyle{IEEEtran}
+\bibliography{2019-PPFIT-ShortName-bib}
+
+%--------------------------------------------------------
+%--------------------------------------------------------
+%--------------------------------------------------------
+\end{document}
